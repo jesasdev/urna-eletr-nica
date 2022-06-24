@@ -9,7 +9,9 @@ votoBranco = 0
 votoNulo =0
 while voto >=0:
     voto = int(input())
-    if voto == 22:
+    if voto<0:
+        break
+    elif voto == 22:
         votoBolsonaro= votoBolsonaro+1
         print('Bolsonaro')
     elif voto == 13:
@@ -24,7 +26,9 @@ while voto >=0:
     elif voto !=22 or voto!= 13 or voto != 12 or voto != 0 :
         votoNulo = votoNulo+1
         print('Nulo')
+
 else:
+
    print('Fim')
 
 votoTotal = votoBolsonaro + votoLula+votoBranco+votoNulo+votoCiro
@@ -43,7 +47,7 @@ print('Nulo',votoNulo,percentNulo.__format__('.2f'),'%')
 print('Votos Total',votoTotal,'100%')
 
 if(votoBolsonaro>=primeiroTurno):
-    print('Bolsonaro Eleito com ',votoBolsonaro ,' votos:',percentBolsonaro.__format__('.2f'),'%')
+    print('Bolsonaro Eleito com ',percentBolsonaro.__format__('.2f'),'% dos votos válidos','\nTotal de votos:',votoBolsonaro)
 elif votoLula>=primeiroTurno:
     print('Lula Eleito com ',votoLula,' votos:',percentLula.__format__('.2f'),'%')
 elif votoCiro>=primeiroTurno:
