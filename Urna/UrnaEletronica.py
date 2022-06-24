@@ -38,20 +38,21 @@ percentBolsonaro = float(100*votoBolsonaro)/votoTotal
 percentCiro = float(100*votoCiro)/votoTotal
 percentBranco = float(100*votoBranco)/votoTotal
 percentNulo = float(100*votoNulo)/votoTotal
-
+print('Apuração\n')
 print('Bolsonaro',votoBolsonaro,percentBolsonaro.__format__('.2f'),'%')
 print('Lula',votoLula,percentLula.__format__('.2f'),'%')
 print('Ciro',votoCiro,percentCiro.__format__('.2f'),'%')
 print('Branco',votoBranco,percentBranco.__format__('.2f'),'%')
 print('Nulo',votoNulo,percentNulo.__format__('.2f'),'%')
-print('Votos Total',votoTotal,'100%')
+print('Votos Total',votoTotal,'100%\n')
 
 if(votoBolsonaro>=primeiroTurno):
+    print('Resultado final')
     print('Bolsonaro Eleito com ',percentBolsonaro.__format__('.2f'),'% dos votos válidos','\nTotal de votos:',votoBolsonaro)
 elif votoLula>=primeiroTurno:
-    print('Lula Eleito com ',votoLula,' votos:',percentLula.__format__('.2f'),'%')
+    print('Lula Eleito com ',percentLula.__format__('.2f'),'% dos votos válidos','\nFotal de votos:',votoLula)
 elif votoCiro>=primeiroTurno:
-    print('Ciro Eleito com',votoCiro,' votos:',percentCiro.__format__('.2f'),'%')
+    print('Ciro Eleito com',percentCiro.__format__('.2f'),'% dos votos válidos ','\nTotal de votos:',votoCiro)
 else:
-    print('Com os resultados:','\nBolsonaro:',percentBolsonaro.__format__('.2f'),'%',' \nLula:',percentLula.__format__('.2f'),'%',
+    print('Resultados:','\nBolsonaro:',percentBolsonaro.__format__('.2f'),'%',' \nLula:',percentLula.__format__('.2f'),'%',
           '\nCiro:',percentCiro.__format__('.2f'),'%','\nÉ necessário segundo Turno')
